@@ -16,12 +16,14 @@ class Solution(object):
         
         temp = x
         rev = 0
+        if temp >= 0:
+            while temp != 0:
+	            rev = (rev * 10) + (temp % 10)
+	            temp = temp // 10
  
-        while temp != 0:
-	        rev = (rev * 10) + (temp % 10)
-	        temp = temp // 10
- 
-        if x == rev:
-	        print("true")
+            if x == rev:
+	            return True
+            else:
+	            return False
         else:
-	        print("false")
+            return False
